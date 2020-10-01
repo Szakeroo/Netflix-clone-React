@@ -33,7 +33,7 @@ export function FooterContainer() {
                 </Footer.Column>
             </Footer.Row>
             <Footer.Break/>
-            <Footer.Text>Netflix by Szakeroo</Footer.Text>
+            <Footer.Text>Netflix Clone by Szakeroo</Footer.Text>
         </Footer>
     )
 }
