@@ -10,7 +10,7 @@ export const Inner = styled.div`
   
   @media (max-width: 1000px) {
   flex-direction: column;
-  }
+    }
   
 `;
 export const Item = styled.div`
@@ -18,7 +18,7 @@ export const Item = styled.div`
   border-bottom: 8px solid #222;
   padding: 50px 5%;
   overflow: hidden;
-`
+`;
 export const Wrapper = styled.div`
   width: 50%;
   @media (max-width: 1000px) {
@@ -28,7 +28,11 @@ export const Wrapper = styled.div`
   }
 `;
 export const Container = styled.div`
-
+  @media (max-width: 1000px) {
+  ${Item}:last-of-type h2 {
+    margin-bottom: 50px;
+    }
+  }
 `;
 
 export const Title = styled.h1`
