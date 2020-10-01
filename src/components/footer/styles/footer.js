@@ -30,6 +30,9 @@ export const Link = styled.a`
   margin-bottom: 20px;
   font-size: 14px;
   text-decoration: none;
+  &:hover{
+  color: white;
+  }
 `;
 export const Title = styled.p`
   font-size: 16px;
