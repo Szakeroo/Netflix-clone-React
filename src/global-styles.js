@@ -9,4 +9,14 @@ export const GlobalStyles = createGlobalStyle`
       color: #333333;
       font-size: 16px;
       }
+       input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+}
+
+    input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px white inset;/*your box-shadow*/
+    -webkit-text-fill-color: #333;
+} 
+\`;
 `

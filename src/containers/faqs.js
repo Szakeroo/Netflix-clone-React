@@ -1,6 +1,7 @@
 import React from "react";
 import faqsData from "../fixtures/faqs.json"
 import { Accordion } from "../components";
+import EmailForm from "../components/email-form";
 
 export function FaqsContainer() {
     return(
@@ -14,6 +15,13 @@ export function FaqsContainer() {
                 </Accordion.Item>
                 )
             }
+            <EmailForm>
+                <EmailForm.Input placeholder={"Email Adress"}/>
+                <EmailForm.Button>Try it now</EmailForm.Button>
+                <EmailForm.ErrorMsg/>
+                <EmailForm.Break/>
+                <EmailForm.Text>Ready to watch? Enter your email to create or restart your membership</EmailForm.Text>
+            </EmailForm>
         </Accordion>
     )
 
