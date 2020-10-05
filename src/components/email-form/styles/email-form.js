@@ -59,7 +59,9 @@ export const Text = styled.p`
   font-size: 19.2px;
   color: white;
   text-align: center;
-  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   @media (max-width: 600px) {
     font-size: 16px;
@@ -74,8 +76,11 @@ export const ErrorMsg = styled.h4`
   color: red;
   margin: 3px 0 0 0;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
-export const Wrapper = styled.body`
+export const Wrapper = styled.div`
   height: 30px;
   width: 100%;
   display: block;

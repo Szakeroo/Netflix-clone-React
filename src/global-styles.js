@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
     html, body {
@@ -10,13 +10,18 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 16px;
       }
        input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-box-shadow:0 0 0 50px white inset; 
     -webkit-text-fill-color: #333;
 }
 
     input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 50px white inset;/*your box-shadow*/
+    -webkit-box-shadow: 0 0 0 50px white inset;
     -webkit-text-fill-color: #333;
 } 
+  #center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 \`;
 `
