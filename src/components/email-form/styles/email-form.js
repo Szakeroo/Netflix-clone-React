@@ -13,7 +13,7 @@ export const Container = styled.div`
   }
 `;
 export const Input = styled.input`
-  max-width: 417px;
+  max-width: 450px;
   width: 90%;
   border: 0;
   outline: none;
@@ -59,9 +59,6 @@ export const Text = styled.p`
   font-size: 19.2px;
   color: white;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   
   @media (max-width: 600px) {
     font-size: 16px;

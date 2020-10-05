@@ -18,8 +18,9 @@ export default function Home() {
                         <EmailForm.Button>Try it now</EmailForm.Button>
                         <EmailForm.ErrorMsg id={"center"}/>
                         <EmailForm.Break/>
-                        <EmailForm.Text>Ready to watch? Enter your email to create or restart your
-                            membership</EmailForm.Text>
+                        <EmailForm.Text>
+                            Ready to watch? Enter your email to create or restart your membership
+                        </EmailForm.Text>
                     </EmailForm>
                 </Feature>
             </HeaderContainer>

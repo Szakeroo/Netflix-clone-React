@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Container = styled.div`
   display: flex;
@@ -13,12 +13,14 @@ export const Inner = styled.div`
   flex-direction: column;
   max-width: 815px;
   margin: auto;
+  justify-content: center;
+  
 `;
 export const Item = styled.div`
   color: white;
   margin-bottom: 10px;
   user-select: none;
-  max-width: 670px;
+  max-width: 700px;
   
   &:first-of-type{
     margin-top: 3em;

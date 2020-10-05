@@ -20,7 +20,7 @@ export function FaqsContainer() {
                 <EmailForm.Button>Try it now</EmailForm.Button>
                 <EmailForm.ErrorMsg/>
                 <EmailForm.Break/>
-                <EmailForm.Text>Ready to watch? Enter your email to create or restart your membership</EmailForm.Text>
+                <EmailForm.Text id={"margin-left"}>Ready to watch? Enter your email to create or restart your membership</EmailForm.Text>
             </EmailForm>
         </Accordion>
     )
