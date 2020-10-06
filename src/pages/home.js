@@ -14,8 +14,8 @@ export default function Home() {
                     <Feature.Title>Unlimited films, TV programmes and more.</Feature.Title>
                     <Feature.SubTitle>Watch anywhere. Cancel at any time</Feature.SubTitle>
                     <EmailForm id={"center"}>
-                        <EmailForm.Input placeholder={"Email Adress"}/>
-                        <EmailForm.Button>Try it now</EmailForm.Button>
+                        <EmailForm.Input placeholder={"Email Address"}/>
+                        <EmailForm.Button>GET STARTED</EmailForm.Button>
                         <EmailForm.ErrorMsg id={"center"}/>
                         <EmailForm.Break/>
                         <EmailForm.Text>

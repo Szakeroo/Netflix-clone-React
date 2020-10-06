@@ -10,7 +10,7 @@ export default function EmailForm({children, ...restProps}) {
     };
     const handleResetEmail = () => {
         if (email.length < 5 || !email.includes("@") || !email.includes(".")) {
-            setMessage("Email is not validate")
+            setMessage("Email is required!")
         } else {
             setEmail("")
             alert(`${email} has been sent!`)

@@ -70,7 +70,7 @@ export const Break = styled.div`
   height: 0; 
 `
 export const ErrorMsg = styled.h4`
-  color: red;
+  color: #ffa00a;
   margin: 3px 0 0 0;
   font-size: 16px;
   display: flex;
