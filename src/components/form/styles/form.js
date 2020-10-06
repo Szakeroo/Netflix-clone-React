@@ -14,11 +14,11 @@ export const Container = styled.div`
   margin: auto auto 100px;
 `;
 export const Error = styled.div`
-  background: #e87c03;
-  border-radius: 4px;
+  background: transparent;
   margin: 0 0 16px;
-  color: white;
-  padding: 15px 20px;
+  color: red;
+  height: 20px;
+  width: 100%;
 `;
 export const Base = styled.form`
   display: flex;
@@ -27,13 +27,21 @@ export const Base = styled.form`
   width: 100%;
 `;
 export const Title = styled.h1`
-
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 28px;
 `;
 export const Text = styled.p`
-
+  color: #737373;
+  font-size: 16px;
+  font-weight: 500;
 `;
 export const TextSmall = styled.p`
-
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: normal;
+  color: #8c8c8c;
 `;
 export const Link = styled(ReactRouterLink)`
   color: white;
@@ -44,9 +52,35 @@ export const Link = styled(ReactRouterLink)`
   }
 `;
 export const Input = styled.input`
-
+  outline: none;
+  background: #333;
+  border-radius: 4px;
+  border: 0;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
 `;
 export const Submit = styled.button`
-
+  background: #e50914;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 24px 0 12px;
+  padding: 16px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  
+  &:disabled {
+    opacity: 0.5;
+  }
+  
 `;
 

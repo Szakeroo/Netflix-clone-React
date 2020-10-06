@@ -1,12 +1,13 @@
 import React,{ useState } from "react";
 import { HeaderContainer } from "../containers/header";
 import { FooterContainer } from "../containers/footer";
-import { Form} from "../components";
+import { Form } from "../components";
+import * as ROUTES from "../constants/routes"
 
 export default function SignIn() {
     const [emailAddress, setEmailAddress] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+    const [error, setError] = useState("Password its not correct");
 
     const isInValid = password === "" || emailAddress === "";
     const handleSignIn = (e) => {
@@ -17,7 +18,7 @@ export default function SignIn() {
             <HeaderContainer>
                 <Form>
                     <Form.Title>Sign In</Form.Title>
-                    {error && <Form.Error>{error}</Form.Error>}
+                    <Form.Error>{error}</Form.Error>
                     <Form.Base onSubmit={handleSignIn} method={"POST"}>
                         <Form.Input
                             placeholder={"Email Address"}
@@ -35,6 +36,12 @@ export default function SignIn() {
                             Sign In
                         </Form.Submit>
                     </Form.Base>
+                    <Form.Text>
+                        New to Netflix? <Form.Link to={ROUTES.SIGN_UP}>Sign up now.</Form.Link>
+                    </Form.Text>
+                    <Form.TextSmall>
+                        This page is protected by Google reCAPTCHA to ensue you're not a bot. Learn more
+                    </Form.TextSmall>
                 </Form>
             </HeaderContainer>
             <FooterContainer/>
