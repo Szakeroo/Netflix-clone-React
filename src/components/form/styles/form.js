@@ -36,12 +36,14 @@ export const Text = styled.p`
   color: #737373;
   font-size: 16px;
   font-weight: 500;
+  user-select: none;
 `;
 export const TextSmall = styled.p`
   margin-top: 10px;
   font-size: 13px;
   line-height: normal;
   color: #8c8c8c;
+  user-select: none;
 `;
 export const Link = styled(ReactRouterLink)`
   color: white;
@@ -62,9 +64,6 @@ export const Input = styled.input`
   padding: 5px 20px;
   margin-bottom: 20px;
   
-  &:last-of-type {
-    margin-bottom: 30px;
-  }
 `;
 export const Submit = styled.button`
   background: #e50914;

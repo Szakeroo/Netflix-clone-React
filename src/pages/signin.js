@@ -34,7 +34,6 @@ export default function SignIn() {
             <HeaderContainer>
                 <Form>
                     <Form.Title>Sign In</Form.Title>
-                    <Form.Error>{error}</Form.Error>
                     <Form.Base onSubmit={handleSignIn} method={"POST"}>
                         <Form.Input
                             placeholder={"Email Address"}
@@ -51,9 +50,10 @@ export default function SignIn() {
                         <Form.Submit disabled={isInvalid} type={"submit"}>
                             Sign In
                         </Form.Submit>
+                        <Form.Error>{error}</Form.Error>
                     </Form.Base>
                     <Form.Text>
-                        New to Netflix? <Form.Link to={ROUTES.SIGN_UP}>Sign up now.</Form.Link>
+                        New to Netflix ?<Form.Link to={ROUTES.SIGN_UP}> Sign up now.</Form.Link>
                     </Form.Text>
                     <Form.TextSmall>
                         This page is protected by Google reCAPTCHA to ensue you're not a bot. Learn more
