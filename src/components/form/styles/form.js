@@ -17,7 +17,7 @@ export const Error = styled.div`
   background: transparent;
   margin: 0 0 16px;
   color: red;
-  height: 20px;
+  height: 40px;
   width: 100%;
 `;
 export const Base = styled.form`
@@ -79,7 +79,7 @@ export const Submit = styled.button`
   outline: none;
   
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.2;
   }
   
 `;
