@@ -6,6 +6,10 @@ export const Background = styled.div`
   flex-direction: column;
   background: url(${({ src}) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')})
   top left / cover no-repeat;
+  
+  @media(max-width: 1100px) {
+    ${({dontShowOnSmallVP}) => dontShowOnSmallVP && "background: none;" }
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -72,4 +76,55 @@ export const FeatureText = styled.h2`
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0 0 20px 0;
+`;
+export const Link = styled.p`
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-weight: ${({active}) => (active === "true" ? "700" : "normal")};
+  cursor: pointer;
+  
+  &:hover {
+    font-weight: bold;
+  }
+  &:last-of-type{
+    margin-right: 0;
+  }
+`;
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const Dropdown = styled.div`
+  display: none;
+  background-color: black;
+  position: absolute;
+  padding: 10px;
+  width: 100px;
+  top: 32px;
+  right: 10px;
+  
+`;
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+  
+  button {
+    cursor: pointer;
+  }
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+export const Picture = styled.button`
+  background: url(${({src}) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  outline: none;
 `;
