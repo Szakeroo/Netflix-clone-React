@@ -7,7 +7,6 @@ export const Container = styled.div`
   align-items: center;
   margin: auto;
   max-width: 80%;
-  
 `;
 export const Title = styled.h1`
   width: 100%;
@@ -38,11 +37,10 @@ export const Picture = styled.img`
   height: auto;
   border: 3px solid black;
   cursor: pointer;
-  
 `;
 export const Item = styled.li`
   max-height: 200px;
-  max-height: 200px;
+  max-width: 200px;
   list-style-type: none;
   text-align: center;
   margin-right: 30px;
