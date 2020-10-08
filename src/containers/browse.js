@@ -9,6 +9,7 @@ import logo from "../logo.svg";
 export function BrowseContainer({slides}) {
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("")
     const {firebase} = useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
 
@@ -31,12 +32,17 @@ export function BrowseContainer({slides}) {
                         <Header.TextLink>Films</Header.TextLink>
                     </Header.Wrapper>
                     <Header.Wrapper>
+                        <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
                         <Header.Profile>
                             <Header.Picture src={user.photoURL}/>
                             <Header.Dropdown>
                                 <Header.Wrapper>
                                     <Header.Picture src={user.photoURL}/>
                                     <Header.TextLink>{user.displayName}</Header.TextLink>
+                                </Header.Wrapper>
+                                <Header.Wrapper>
+                                    <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign
+                                        out</Header.TextLink>
                                 </Header.Wrapper>
                             </Header.Dropdown>
                         </Header.Profile>
