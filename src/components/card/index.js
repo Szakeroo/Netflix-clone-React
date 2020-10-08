@@ -44,12 +44,12 @@ Card.Meta = function CardMeta({children, ...restProps}) {
 Card.Entities = function CardEntities({children, ...restProps}) {
     return <Entities {...restProps}>{children}</Entities>
 };
-Card.Item = function CardItem({children, ...restProps}) {
+Card.Item = function CardItem({item ,children, ...restProps}) {
     const {setShowFeature, setItemFeature} = useContext(FeatureContext)
     return (
         <Item onClick={() => {
-            setItemFeature()
-            setShowFeature(true)
+            setItemFeature(item);
+            setShowFeature(true);
         }}
               {...restProps}>
             {children}
