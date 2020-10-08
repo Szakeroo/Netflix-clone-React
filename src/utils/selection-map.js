@@ -10,6 +10,9 @@ export default function selectionMap({ series, films }) {
                 data: series.filter((item) => item.genre === "children")
             },
             {
+                title: 'Children', data: series?.filter((item) => item.genre === 'children')
+            },
+            {
                 title: "Crime",
                 data: series.filter((item) => item.genre === "crime")
             },
