@@ -1,14 +1,16 @@
-import React, {useContext, useEffect, useState} from "react";
-import {SelectProfileContainer} from "./profiles";
-import {FirebaseContext} from "../context/firebase";
-import {Loading} from "../components";
+import React, { useContext, useEffect, useState } from "react";
+import { SelectProfileContainer } from "./profiles";
+import { FirebaseContext } from "../context/firebase";
+import { Loading, Card } from "../components";
 import Header from "../components/header";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
 export function BrowseContainer({slides}) {
     const [profile, setProfile] = useState({});
+    const [category, setCategory] = useState("series");
     const [loading, setLoading] = useState(true);
+    const [slideRows, setSlideRows] = useState([]);
     const [searchTerm, setSearchTerm] = useState("")
     const {firebase} = useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
@@ -19,6 +21,10 @@ export function BrowseContainer({slides}) {
         }, 3000);
     }, [profile.displayName]);
 
+    useEffect(() => {
+        setSlideRows(slides[category]);
+    },[slides, category])
+
     return profile.displayName ? (
         <>
             {
@@ -28,8 +34,16 @@ export function BrowseContainer({slides}) {
                 <Header.Frame>
                     <Header.Wrapper>
                         <Header.Logo to={ROUTES.HOME} src={logo} alt={"Netflix logo"}/>
-                        <Header.TextLink>Series</Header.TextLink>
-                        <Header.TextLink>Films</Header.TextLink>
+                        <Header.TextLink
+                            active={category === "series" ? "true" : "false"}
+                            onClick={() => setCategory("series")}>
+                            Series
+                        </Header.TextLink>
+                        <Header.TextLink
+                            active={category === "films" ? "true" : "false"}
+                            onClick={() => setCategory("films")}>
+                            Series>Films
+                        </Header.TextLink>
                     </Header.Wrapper>
                     <Header.Wrapper>
                         <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
@@ -59,8 +73,12 @@ export function BrowseContainer({slides}) {
                         projects in a
                         futile attempt to feel like he's part of the world around him.
                     </Header.Text>
+                    <Header.PlayButton>Play</Header.PlayButton>
                 </Header.Feature>
             </Header>
+            <Card.Group>
+
+            </Card.Group>
         </>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile}/>

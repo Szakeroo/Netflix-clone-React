@@ -10,7 +10,7 @@ import {
     Link,
     Text,
     Wrapper,
-    Picture, Dropdown, Profile, Search, SearchIcon, SearchInput,
+    Picture, Dropdown, Profile, Search, SearchIcon, SearchInput, PlayButton,
 } from "./styles/header";
 
 export default function Header({bg = true, children, ...restProps}) {
@@ -44,6 +44,9 @@ Header.Profile = function HeaderProfile({children, ...restProps}) {
 };
 Header.Dropdown = function HeaderDropdown({children, ...restProps}) {
     return <Dropdown {...restProps}>{children}</Dropdown>
+}
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps}) {
+    return <PlayButton {...restProps}>{children}</PlayButton>
 }
 Header.Search = function HeaderSearch({searchTerm, setSearchTerm, ...restProps}) {
     const [searchActive, setSearchActive] = useState(false)
