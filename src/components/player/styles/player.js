@@ -29,35 +29,37 @@ export const Inner = styled.div`
 `;
 export const Close = styled.button`
   position: absolute;
-  top: 15px;
   right: 15px;
+  top: 15px;
   width: 22px;
   height: 22px;
-  opacity: 0.3;
+  opacity: 0.7;
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  outline: none;
+
   &:hover {
     opacity: 1;
   }
-  &:before,&:after {
-    content: " ";
+
+  &:before,
+  &:after {
     position: absolute;
-    top: 0;
     left: 10px;
+    top: 0;
+    content: ' ';
     height: 22px;
-    width: 22px;
+    width: 2px;
     background-color: #333;
-    transition: rotate 0.5s ease;
-    
   }
+
   &:before {
     transform: rotate(45deg);
   }
   &:after {
     transform: rotate(-45deg);
   }
-  
 `;
 export const Button = styled.button`
   box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);

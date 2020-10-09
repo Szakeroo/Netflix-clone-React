@@ -13,8 +13,8 @@ export default function EmailForm({children, ...restProps}) {
             setMessage("Email is required!")
         } else {
             setEmail("")
-            alert(`${email} has been sent!`)
             setMessage("")
+            alert(`Mail to ${email} has been sent!`)
         }
     };
     return (
