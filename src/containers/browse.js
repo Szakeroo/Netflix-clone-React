@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { SelectProfileContainer } from "./profiles";
 import { FirebaseContext } from "../context/firebase";
-import { Loading, Card } from "../components";
+import { Loading, Card, Player } from "../components";
 import Header from "../components/header";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
+import { FooterContainer } from "./footer";
 
 export function BrowseContainer({slides}) {
     const [profile, setProfile] = useState({});
@@ -92,15 +93,17 @@ export function BrowseContainer({slides}) {
                                     </Card.Item>
                                     )}
                             </Card.Entities>
-                            {/*<Card.Feature category={category}>*/}
-                            {/*    <Player>*/}
-                            {/*        <Player.Button/>*/}
-                            {/*        <Player.Video src={"/videos/bunny.mp4"}/>*/}
-                            {/*</Card.Feature>*/}
+                            <Card.Feature category={category}>
+                                <Player>
+                                    <Player.Button/>
+                                    <Player.Video src={"/videos/bunny.mp4"}/>
+                                </Player>
+                            </Card.Feature>
                         </Card>
                     )
                 }
             </Card.Group>
+            <FooterContainer/>
         </>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile}/>
