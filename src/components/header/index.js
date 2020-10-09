@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {Link as ReactRouterLink} from "react-router-dom";
 import {
     Background,
@@ -12,6 +12,7 @@ import {
     Wrapper,
     Picture, Dropdown, Profile, Search, SearchIcon, SearchInput, PlayButton,
 } from "./styles/header";
+import {PlayerContext} from "../../app";
 
 export default function Header({bg = true, children, ...restProps}) {
     return bg ? <Background {...restProps}>{children}</Background> : children;
@@ -46,7 +47,8 @@ Header.Dropdown = function HeaderDropdown({children, ...restProps}) {
     return <Dropdown {...restProps}>{children}</Dropdown>
 }
 Header.PlayButton = function HeaderPlayButton({ children, ...restProps}) {
-    return <PlayButton {...restProps}>{children}</PlayButton>
+    const { showPlayer, setShowPlayer } = useContext(PlayerContext);
+    return <PlayButton onClick={() => setShowPlayer(!showPlayer)} {...restProps}>{children}</PlayButton>
 }
 Header.Search = function HeaderSearch({searchTerm, setSearchTerm, ...restProps}) {
     const [searchActive, setSearchActive] = useState(false)

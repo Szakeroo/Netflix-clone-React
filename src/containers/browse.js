@@ -74,10 +74,13 @@ export function BrowseContainer({slides}) {
                         projects in a
                         futile attempt to feel like he's part of the world around him.
                     </Header.Text>
-                    <Header.PlayButton>Play</Header.PlayButton>
+                    <Player>
+                        <Player.Button/>
+                        <Player.Video src={"/videos/bunny.mp4"}/>
+                    </Player>
                 </Header.Feature>
             </Header>
-            <Card.Group>
+            <Card.Group style={{borderBottom: "8px solid #222"}}>
                 {
                     slideRows.map((slideItem) =>
                         <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
