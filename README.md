@@ -1,6 +1,6 @@
 ## Netflix Clone
 
-Live Demo [Click Here](https://szakeroo.github.io/recycle_cloth_app/).
+Live Demo [Click Here](https://szakeroonetflix.herokuapp.com).
 
 ## Technologies
 
