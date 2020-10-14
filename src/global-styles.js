@@ -23,8 +23,11 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
     align-items: center;
   }
+  #padding {
+    padding: 0 19px;
+  }
   #margin-left {
     margin-left: 6%;
-  }
+  } 
 \`;
 `

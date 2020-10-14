@@ -15,9 +15,9 @@ export function FaqsContainer() {
                 </Accordion.Item>
                 )
             }
-            <EmailForm>
+            <EmailForm >
                 <EmailForm.Input placeholder={"Email Adress"}/>
-                <EmailForm.Button>GET STARTED</EmailForm.Button>
+                <EmailForm.Button id={"padding"}>GET STARTED</EmailForm.Button>
                 <EmailForm.ErrorMsg/>
                 <EmailForm.Break/>
                 <EmailForm.Text id={"margin-left"}>Ready to watch? Enter your email to create or restart your membership</EmailForm.Text>
